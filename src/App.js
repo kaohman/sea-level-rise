@@ -13,6 +13,7 @@ class App extends Component {
   async componentDidMount() {
     try {
       const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/stations');
+      console.log(process.env.REACT_APP_BACKEND_URL + '/api/v1/stations')
       const stations = await response.json();
       this.setState({ stations });
     } catch (error) {
